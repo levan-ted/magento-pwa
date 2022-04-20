@@ -1,0 +1,89 @@
+.CheckoutSteps {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  bottom: var(--breadcrumbs-height);
+  height: 100px;
+  width: 100%;
+  background: $default-secondary-base-color;
+}
+
+.ProgressBar {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: $default-secondary-dark-color;
+  span {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: $default-primary-base-color;
+    animation: slide-in 1.2s ease-out;
+  }
+}
+
+.Phase {
+  display: flex;
+  flex-direction: column;
+  background-color: $default-secondary-base-color;
+  width: 50px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    position: absolute;
+    bottom: -10px;
+    font-weight: 600;
+    width: max-content;
+  }
+}
+
+.CompletedStep,
+.NotCompletedStep {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: $default-secondary-light-color;
+}
+
+.CompletedStep {
+  background-color: $default-primary-base-color;
+  animation: beat 0.4s ease-out 0.2s;
+  img {
+    width: 65%;
+  }
+}
+
+.NotCompletedStep {
+  background-color: $default-secondary-dark-color;
+}
+
+@keyframes slide-in {
+  from {
+    width: 0%;
+  }
+  to {
+  }
+}
+
+@keyframes beat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1, 1);
+  }
+  30%,
+  80% {
+    transform: scale(0.92, 0.95);
+  }
+}
