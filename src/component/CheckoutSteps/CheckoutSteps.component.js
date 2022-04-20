@@ -3,22 +3,6 @@ import { PureComponent } from "react";
 import checkIconUrl from "./assets/check.svg";
 import "./CheckoutSteps.style";
 
-// const steps = [
-//   {
-//     name: "SHIPPING_STEP",
-//     title: "Shipping",
-//     stepNum: 1,
-//     blockName: "Shipping",
-//   },
-//   {
-//     name: "BILLING_STEP",
-//     title: "Review & Payments",
-//     stepNum: 2,
-//     blockName: "Billing",
-//   },
-//   { name: "DETAILS_STEP", title: "Details", stepNum: 3, blockName: "Details" },
-// ];
-
 export class CheckoutSteps extends PureComponent {
   static propTypes = {
     checkoutStep: PropTypes.text?.isRequired,
